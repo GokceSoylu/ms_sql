@@ -65,3 +65,13 @@ select avg(EmployeeKey) as avg from DimEmployee
 --kaç tane kayot olduğunu öğrenmek için kullanılır
 select count(CustomerKey) from DimCustomer
 select count(distinct(title)) from DimCustomer
+
+--Sitring fonksiyonları
+--UPPER, LOWER
+--yapışna değişiklik kallcı olmaz
+SELECT lower(FirstName), upper(LastName) from DimCustomer
+
+--subsitring(kolon/string, başlangıç, uzunluk)
+--bir değeri parçalayıp parçaasını almak için kullanılır
+select SUBSTRING(firstname, 1,4) from DimCustomer
+select SUBSTRING('Necmiye',1,3)
