@@ -48,3 +48,20 @@ select distinct Suffix from DimCustomer
 --asc : ascanding 1-9
 --desc : descending 9-1
 select CustomerKey, FirstName from DimCustomer where CustomerKey between 11030 and 11040 order by CustomerKey desc 
+
+--MATEMATİKSEL FONKSİYONLAR
+
+--MAX, MIN
+--bir kolonun en büyük/küçük değerini bulmak için kullanılır
+select min(CustomerKey) as minumum_key ,max(CustomerKey) as maximum_key from DimCustomer
+
+--SUM
+select min(EmployeeKey) as min, sum(EmployeeKey) as sum from DimEmployee
+
+--AVG
+select avg(EmployeeKey) as avg from DimEmployee
+
+--COUNT
+--kaç tane kayot olduğunu öğrenmek için kullanılır
+select count(CustomerKey) from DimCustomer
+select count(distinct(title)) from DimCustomer
