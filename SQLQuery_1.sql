@@ -34,3 +34,17 @@ select FirstName as F, LastName as L from DimCustomer where GeographyKey in(30,4
 -- %char% bulunduran
 select FirstName as F, LastName as l from DimCustomer where FirstName like 'A%'
 
+--BETWEEN
+--id>=15 and id<=25 şeklinde uzun yazmaktan kurtarır
+select CustomerKey, FirstName, LastName, Title from DimCustomer WHERE CustomerKey BETWEEN 11015 and 11025
+
+--DISTINCT
+--o kolonda kaç tane farklı olduğunu getirir
+select distinct CustomerKey from DimCustomer
+select distinct gender from DimCustomer
+select distinct Suffix from DimCustomer
+
+--ORDER BY  
+--asc : ascanding 1-9
+--desc : descending 9-1
+select CustomerKey, FirstName from DimCustomer where CustomerKey between 11030 and 11040 order by CustomerKey desc 
